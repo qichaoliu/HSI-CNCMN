@@ -1,2 +1,2 @@
-# HSI-MixNet
+# HSI-CNCMN
 None
