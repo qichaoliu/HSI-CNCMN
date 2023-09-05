@@ -113,7 +113,7 @@ class SubGraphSampler(object):
     
         self.segments=segments = np.reshape(segments, [-1])
         self.S=S = np.zeros([superpixel_count, d], dtype=np.float32)
-        Q = np.zeros([w * h, superpixel_count], dtype=np.float32)
+        # Q = np.zeros([w * h, superpixel_count], dtype=np.float32)
         x = np.reshape(img, [-1, d])
         
         # positions
@@ -129,7 +129,7 @@ class SubGraphSampler(object):
             pixels = x[idx]
             superpixel = np.sum(pixels, 0) / count
             S[i] = superpixel
-            Q[idx, i] = 1
+            # Q[idx, i] = 1
             positions[i] = np.sum(xy_coordinate[idx], 0) / count # 计算positions
         
         
